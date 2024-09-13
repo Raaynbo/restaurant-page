@@ -1,0 +1,40 @@
+body {
+	height: 100vh;
+	overflow-y: hidden;
+	background-color: black;
+	margin: 0px;
+}
+
+header {
+	padding: 8px;
+	background-color: white;
+
+}
+
+#content {
+	background-color: purple;
+	height: 90%;
+	width: 100%;
+}
+
+#navbar {
+	display: flex;
+	justify-content: space-around;
+	gap: 0.4rem;
+	height: 100%;
+}
+
+.navbar_btn {
+	border: none;
+	width: 100%;
+	background-color: teal;
+}
+
+
+footer {
+	height: 5vh;
+}
+
+.selected {
+	background-color: rgba(0, 220, 220, 0.8);
+}
