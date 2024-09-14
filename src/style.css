@@ -33,6 +33,10 @@ header {
 
 footer {
 	height: 5vh;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
 }
 
 .selected {
@@ -57,4 +61,8 @@ footer {
 	align-self: center;
 	display: flex;
 	align-items: center;
+}
+
+.history_layout {
+	overflow-y: auto;
 }
