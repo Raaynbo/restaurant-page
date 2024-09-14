@@ -1,4 +1,5 @@
 import "./style.css";
+import {homePage} from "./home.js";
 console.log("restaurant-page");
 
 
@@ -15,4 +16,4 @@ function createIndexContent(){
 	content.appendChild(contentEl);
 }
 
-createIndexContent()
+homePage(content);
