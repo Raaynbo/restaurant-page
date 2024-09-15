@@ -64,5 +64,20 @@ footer {
 }
 
 .history_layout {
-	overflow-y: auto;
+	overflow-x: auto;
+	display: block;
+	width: 200vw;
+	flex-direction: row;
+}
+
+.history_date {
+	height: 100vh;
+	display: flex;
+	background-color: peru;
+}
+
+.history_gallery {
+	height: 100%;
+	width: 100%;
+	background-color: red;
 }
