@@ -120,7 +120,7 @@ function updateNavbar(){
 		setCarrouselImg(index)
 }
 
-function setCarrouselImg( index){
+function setCarrouselImg(index){
 	const el = document.querySelector(".carrousel_img");
 	el.src = img_list[index];
 
