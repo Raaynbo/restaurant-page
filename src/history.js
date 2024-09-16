@@ -1,3 +1,6 @@
+import {createCarrousel,setMiddleNavbar, startProgressBar, createCarrouselNavbar, loadCarrouselBackground} from './carrousel.js';
+
+
 
 function historyPage(container){
 
@@ -8,35 +11,33 @@ function historyPage(container){
 	hgallery.classList.add("history_gallery");
 	container.classList.add("history_layout");
 	
-	makeDateContent(hdate);
 
+	let [carrousel, carrousel_img, carrousel_left, carrousel_right] = createCarrousel();
+	let navbar = createCarrouselNavbar();
+	let progress = startProgressBar();
+	
+	hdate.appendChild(carrousel);
+	hdate.appendChild(navbar);
+	hdate.appendChild(progress);
 	container.appendChild(hdate);
 	container.appendChild(hgallery);
 
 
+	carrousel_left.addEventListener("click",(e) => changeImgClick(carrousel_img, "left"));
+	carrousel_right.addEventListener("click",(e) => changeImgClick(carrousel_img, "right"));
+
+	let navdatas = document.querySelectorAll(".carrousel_nav");
+
+	navdatas.forEach((pos) => {
+		pos.addEventListener("click", (e) => {
+			setMiddleNavbar(e.target.textContent);
+		})
+	})
+
+	loadCarrouselBackground(carrousel_img);
 }
 
-function makeDateContent(container){
-	const carrousel = document.createElement('div');
-	const datebar = document.createElement('div');
 
-	const carrousel_img = document.createElement('img');
-	const carrousel_left = document.createElement('div'); 
-	const carrousel_right = document.createElement('div'); 
-
-	carrousel_img.classList.add("carrousel_img");
-	carrousel_right.classList.add("carrousel_right");
-	carrousel_left.classList.add("carrousel_left");
-	carrousel.classList.add("carrousel");
-	datebar.classList.add("datebar");
-
-	carrousel.appendChild(carrousel_img);
-	carrousel.appendChild(carrousel_left);
-	carrousel.appendChild(carrousel_right);
-	container.appendChild(carrousel);
-	container.appendChild(datebar);
-
-}
 
 
 export {historyPage};
