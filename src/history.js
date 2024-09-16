@@ -10,6 +10,27 @@ function historyPage(container){
 	hdate.classList.add("history_date");
 	hgallery.classList.add("history_gallery");
 	container.classList.add("history_layout");
+
+	const hdate_text = document.createElement('div');
+	const hdate_text_title = document.createElement('div');
+	const hdate_logo = document.createElement('img');
+	hdate_text.classList.add("history_date_textzone");
+	hdate_text.classList.add("history_date_textzone");
+	hdate_logo.classList.add("hdate_logo");
+	
+	hdate.appendChild(hdate_text);
+
+	hdate_text_title.textContent = " THIS IS THE ZONE FOR FUN FACTS AND OTHER BULLSHIT";
+
+	const hdate_text_detail = document.createElement('div');
+	hdate_text_title.classList.add("hdate_text_title");
+	hdate_text_detail.classList.add("hdate_text_detail");
+
+	hdate_text_detail.textContent = "Smoll text heersr and there you know it wont be that long ";
+
+	hdate_text.appendChild(hdate_logo);
+	hdate_text.appendChild(hdate_text_title);
+	hdate_text.appendChild(hdate_text_detail);
 	
 
 	let [carrousel, carrousel_img, carrousel_left, carrousel_right] = createCarrousel();

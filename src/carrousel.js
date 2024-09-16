@@ -1,3 +1,4 @@
+import {actualContent} from "./index.js";
 import bg1 from './asset/bg1.jpg';
 import bg2 from './asset/bg2.jpg';
 import bg3 from './asset/bg3.jpg';
@@ -164,7 +165,9 @@ function startProgressBar(){
 async function loadCarrouselBackground(el){
 	resetProgressBar();
 	el.src = img_list[index];
-	await  updateProgressBar(el, 9000);
+	if (actualContent == 2){
+		await  updateProgressBar(el, 9000);
+	}
 
 }
 
@@ -174,27 +177,31 @@ function resetProgressBar(){
 	pb.style.width = `${barWidth}%`; 
 }
 
-async function updateProgressBar(el, time =9900){
+async function updateProgressBar(el ){
+		if (actualContent == 2){ 
 		let intervalID = setInterval(() => {
 
 		    if (barWidth >= 100) {
 		      clearInterval(intervalID);
-			updateCarrouselImg(el, time);
+				updateCarrouselImg(el);
 		    } else {
 		      animate();
 		    }
 		  }, 10);
+		}
 }
 
 let barWidth = 0;
 
 const animate = () => {
-	barWidth += 0.1;
-	const progressBar = document.querySelector(".bar");
-	progressBar.style.width = `${barWidth}%`;
+	if (actualContent ==2) {
+		barWidth += 0.1;
+		const progressBar = document.querySelector(".bar");
+		progressBar.style.width = `${barWidth}%`;
+	}
 };
 
-async function updateCarrouselImg(el, time = 9900) {
+async function updateCarrouselImg(el ) {
 	const navbar = document.querySelectorAll(".carrousel_nav");
 	navbar.forEach((pos) => {
 		pos.style.animation = "roll_left 0.5s";
