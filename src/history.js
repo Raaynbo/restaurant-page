@@ -1,4 +1,4 @@
-import {createCarrousel,setMiddleNavbar, startProgressBar, createCarrouselNavbar, loadCarrouselBackground} from './carrousel.js';
+import {createCarrousel,setMiddleNavbar, carrouselState, startProgressBar, createCarrouselNavbar, loadCarrouselBackground} from './carrousel.js';
 import {createGallery, createGalleryGrid} from './gallery.js';
 import logo_b from "./asset/logo-brasserie-georges.png";
 
@@ -42,6 +42,8 @@ function historyPage(container){
 
 	navdatas.forEach((pos) => {
 		pos.addEventListener("click", (e) => {
+			carrouselState.focus = true;
+			console.log(carrouselState.focus);
 			setMiddleNavbar(e.target.textContent);
 		})
 	})

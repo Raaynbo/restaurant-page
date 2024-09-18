@@ -5,7 +5,14 @@ import bg3 from './asset/bg3.jpg';
 import bg4 from './asset/bg4.jpg';
 import bg5 from './asset/bg5.jpg';
 
-let focus = true;
+const state = function (fval) {
+	let focus = fval;
+
+
+	return {focus};
+}
+
+const carrouselState = state(false);
 let index = 0;
 const img_list = [bg1,
 		  bg2,
@@ -14,6 +21,9 @@ const img_list = [bg1,
 		  bg5];
 
 function createCarrousel(){
+	carrouselState.focus = false;
+	
+	console.log(carrouselState);
 	const carrousel = document.createElement('div');
 	const carrousel_dir = document.createElement('div');
 
@@ -123,6 +133,10 @@ function updateNavbar(){
 function setCarrouselImg(index){
 	const el = document.querySelector(".carrousel_img");
 	el.src = img_list[index];
+	if (carrouselState.focus === true){
+		const progressBar = document.querySelector(".bar");
+		progressBar.style.display = "none";	
+	}
 
 }
 
@@ -178,17 +192,17 @@ function resetProgressBar(){
 }
 
 async function updateProgressBar(el ){
-		if (actualContent == 2){ 
 		let intervalID = setInterval(() => {
 
-		    if (barWidth >= 100) {
-		      clearInterval(intervalID);
+			if (carrouselState.focus === true) return;
+			if (barWidth >= 100) {
+				clearInterval(intervalID);
 				updateCarrouselImg(el);
-		    } else {
-		      animate();
-		    }
-		  }, 10);
-		}
+			} else {
+				animate();
+			}
+		}, 10);
+		
 }
 
 let barWidth = 0;
@@ -246,4 +260,4 @@ function getRandomInt(max){
 
 //loadCarrouselBackground(carrousel_img);
 
-export {createCarrousel, startProgressBar,setMiddleNavbar, createCarrouselNavbar, loadCarrouselBackground};
+export {createCarrousel, carrouselState, startProgressBar,setMiddleNavbar, createCarrouselNavbar, loadCarrouselBackground};
