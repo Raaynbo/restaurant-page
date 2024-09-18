@@ -1,4 +1,6 @@
 import "./style.css";
+import "./components.css";
+
 import {homePage} from "./home.js";
 import {historyPage} from "./history.js";
 import {clearElement} from "./utils.js";

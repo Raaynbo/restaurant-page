@@ -27,7 +27,6 @@ header {
 .navbar_btn {
 	border: none;
 	width: 100%;
-	background-color: teal;
 }
 
 
@@ -40,7 +39,7 @@ footer {
 }
 
 .selected {
-	background-color: rgba(0, 220, 220, 0.8);
+	background-color: rgba(255, 215, 30, 0.8);
 }
 
 .home_logo {
@@ -110,14 +109,16 @@ footer {
 }
 
 .history_gallery {
-	height: 150vh;
+	height: 140vh;
 	width: 100%;
 	background-color: white;
 }
 
 .hgallery_catchtext {
-	height: 30vh;
-	color: orchid;
+	padding: 2rem;
+	font-weight: 800;
+	font-size: 23px;
+	height: 20vh;
 	font-weight: 800;
 }
 
@@ -214,7 +215,7 @@ footer {
 	max-width: 650px;
 	margin: 0 auto;
 	display: grid;
-	grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+	grid-template: 0.3fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
 	grid-template-areas:
 		"gallery_title gallery_title gallery_title"
 		"gallery1 gallery2 gallery3"
@@ -224,6 +225,12 @@ footer {
 	;
 	padding: 1rem;
 	box-sizing: border-box;
+}
+
+#grid_title {
+	grid-area: gallery_title;
+	padding: 2rem;
+	font-size: 2rem;
 }
 
 #gallery1 {

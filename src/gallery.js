@@ -1,3 +1,4 @@
+import {createModal} from './popup.js';
 
 const img_list = [
 	"https://www.brasseriegeorges.com/wp-content/uploads/2016/11/jean-moulin-dr.jpg",
@@ -9,12 +10,29 @@ const img_list = [
 	"https://www.brasseriegeorges.com/wp-content/uploads/2016/11/jules-verne.jpg",
 	"https://www.brasseriegeorges.com/wp-content/uploads/2016/11/emile-zola.jpg",
 	"https://www.brasseriegeorges.com/wp-content/uploads/2016/11/verlaine-paul.jpg"
-]
+];
+
+const guest_infos = [
+	["name","time lived", "job"],
+	["name2","time lived", "job"],
+	["name3","time lived", "job"],
+	["name4","time lived", "job"],
+	["name5","time lived", "job"],
+	["name6","time lived", "job"],
+	["name7","time lived", "job"],
+	["name8","time lived", "job"],
+	["name9","time lived", "job"],
+];
 
 function createGalleryGrid(container){
 	const gridzone = document.createElement('div');
 	gridzone.classList.add("gallery_grid");
 
+	const grid_title = document.createElement('div');
+	grid_title.classList.add("grid_title");
+	grid_title.id = "grid_title";
+
+	grid_title.textContent = "GRID TITLE HERE";
 
 	const gallery1 = document.createElement('div');
 	const gallery2 = document.createElement('div');
@@ -45,6 +63,7 @@ function createGalleryGrid(container){
 	gridzone.appendChild(gallery8)
 	gridzone.appendChild(gallery9)
 
+	gridzone.appendChild(grid_title);
 	container.appendChild(gridzone);
 	createGallery(gallery1)
 	createGallery(gallery2)
@@ -60,17 +79,19 @@ function createGalleryGrid(container){
 function createGallery(gallery){
 	const img = document.createElement('img');
 
-	console.log(gallery);
 	const re = /[0-9]/;
-	const gallerynb = gallery.id.match(re);
-	console.log(gallerynb[0])
+	const gallerynb = gallery.id.match(re)[0] -1;
 
-	if (gallerynb[0] == 5){
+	if (gallerynb == 4){
 		img.classList.add('gallery_icon_md');
 	}else{
 		img.classList.add('gallery_icon');
 	}
-	img.src = img_list[gallerynb[0]-1];
+	img.src = img_list[gallerynb];
+	img.addEventListener("click",(e) =>{
+		createModal(guest_infos[gallerynb][0], `${guest_infos[gallerynb][1]} -${guest_infos[gallerynb][2]}` );
+		console.log(gallerynb)
+	})
 	gallery.appendChild(img)
 }
 
