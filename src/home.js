@@ -11,6 +11,9 @@
 	
 	container.appendChild(logo);
 	container.appendChild(hometxt);
+	
+	logo.style.animation = "fadein 0.3s";
+	hometxt.style.animation = "fadein 0.3s";
 }
 
 export {homePage};

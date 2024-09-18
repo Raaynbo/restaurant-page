@@ -122,6 +122,32 @@ footer {
 	font-weight: 800;
 }
 
+.location_layout {
+	height: 100%;
+	width: 100%;
+	background-color: whitesmoke;
+	/* display: flex;
+	flex-direction: column;*/
+}
+
+
+.location_header {
+	background-color: black;
+	height: 4rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.location_txt {
+	font-size: 1.8rem;
+	padding: 4rem 6rem;
+}
+
+.location_txt_part {
+	line-height: 2.6rem;
+}
+
 .carrousel {
 	width: 100%;
 	height: 35vh;

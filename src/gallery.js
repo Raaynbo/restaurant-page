@@ -90,7 +90,6 @@ function createGallery(gallery){
 	img.src = img_list[gallerynb];
 	img.addEventListener("click",(e) =>{
 		createModal(guest_infos[gallerynb][0], `${guest_infos[gallerynb][1]} -${guest_infos[gallerynb][2]}` );
-		console.log(gallerynb)
 	})
 	gallery.appendChild(img)
 }

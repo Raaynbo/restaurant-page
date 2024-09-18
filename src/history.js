@@ -31,6 +31,7 @@ function historyPage(container){
 	hdate.appendChild(progress);
 	container.appendChild(hdate);
 	container.appendChild(hgallery);
+	hdate.style.animation = "fadein 0.3s";
 
 
 	carrousel_left.addEventListener("click",(e) => changeImgClick(carrousel_img, "left"));
