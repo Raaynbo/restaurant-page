@@ -1,5 +1,6 @@
 import {createCarrousel,setMiddleNavbar, startProgressBar, createCarrouselNavbar, loadCarrouselBackground} from './carrousel.js';
 import {createGallery, createGalleryGrid} from './gallery.js';
+import logo_b from "./asset/logo-brasserie-georges.png";
 
 
 function historyPage(container){
@@ -57,6 +58,7 @@ function createTextHdate(){
 	hdate_text.classList.add("history_date_textzone");
 	hdate_logo.classList.add("hdate_logo");
 	
+	hdate_logo.src = logo_b; 
 
 	hdate_text_title.textContent = " THIS IS THE ZONE FOR FUN FACTS AND OTHER BULLSHIT";
 

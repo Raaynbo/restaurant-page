@@ -88,7 +88,7 @@ footer {
 
 .hdate_logo {
 	height: 2.5rem;
-	width: 30%;
+	width: fit-content;
 	padding: 1rem;
 	align-self: center;
 }
@@ -133,7 +133,7 @@ footer {
 
 .location_header {
 	background-color: black;
-	height: 4rem;
+	height: 5rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -145,6 +145,8 @@ footer {
 }
 
 .location_txt_part {
+	margin-top: 1rem;
+	padding: 1rem;
 	line-height: 2.6rem;
 }
 
@@ -309,4 +311,8 @@ footer {
 	padding: 0.4rem;
 	box-sizing: border-box;
 	border-radius: 4rem;
+}
+
+.right {
+	text-align: right;
 }

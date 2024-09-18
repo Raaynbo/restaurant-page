@@ -1,5 +1,11 @@
 console.log("location-page");
+import logo_b from "./asset/logo-brasserie-georges.png";
 
+const txts = [
+	"",
+	"",
+	""
+];
 
 function locationPage(container){
 	container.classList.add("location_layout");
@@ -8,6 +14,7 @@ function locationPage(container){
 
 	const logo = document.createElement('img');
 	logo.classList.add("hdate_logo");
+	logo.src = logo_b;
 
 	title.appendChild(logo);
 	container.appendChild(title);
@@ -25,6 +32,7 @@ function locationPage(container){
 	location_txt.classList.add("location_txt");
 	location_txt_1.classList.add("location_txt_part");
 	location_txt_2.classList.add("location_txt_part");
+	location_txt_2.classList.add("right");
 	location_txt_3.classList.add("location_txt_part");	
 
 	location_txt.appendChild(location_txt_1);
