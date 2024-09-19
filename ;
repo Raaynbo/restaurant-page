@@ -29,8 +29,8 @@ function historyPage(container){
 	hdate_header.classList.add("hdate_header");
 	hdate_header.appendChild(hdate_logo);
 	hdate_text.appendChild(hdate_header);
-	//hdate_text.appendChild(hdate_text_title);
-	//hdate_text.appendChild(hdate_text_detail);
+	hdate_text.appendChild(hdate_text_title);
+	hdate_text.appendChild(hdate_text_detail);
 	hdate_text_detail.textContent = text[0][0];
 	hdate_text_title.textContent = `${text[0][2]} - ${text[0][1]} `;
 	
@@ -56,8 +56,8 @@ function historyPage(container){
 		pos.addEventListener("click", (e) => {
 			carrouselState.focus = true;
 			console.log(carrouselState.focus);
-			//hdate_text_detail.textContent = text[(e.target.textContent-1)][0];
-			//hdate_text_title.textContent = `${text[(e.target.textContent-1)][2]}  ${text[(e.target.textContent-1)][1]} `;
+			hdate_text_detail.textContent = text[(e.target.textContent-1)][0];
+			hdate_text_title.textContent = `${text[(e.target.textContent-1)][2]}  ${text[(e.target.textContent-1)][1]} `;
 			setMiddleNavbar(e.target.textContent);
 		})
 	})
@@ -95,11 +95,9 @@ function createHgalleryContent(){
 	hgallery_catchtext.classList.add("hgallery_catchtext");
 	hgallery_catchtext_title.classList.add("hgallery_catchtext_title");
 	hgallery_catchtext_content.classList.add("hgallery_catchtext_content");
-	hgallery_catchtext_title.textContent = "BRASSERIE GEORGES, AN HISTORIC FIGURE IN LYON LIFE.";
-	hgallery_catchtext_content.textContent = "Right from its opening in 1836, Brasserie Georges was a resounding success, graced by stars such as Alphonse de Lamartine. And as it happens, accounts from 1857 show the French writer still owes 40 francs. Many of France’s greatest names have passed through its doors, including Paul Verlaine, Jules Verne, Utrillo, Jongkind, the Lumière brothers, Edouard Herriot, Mistinguett, Léon Blum, Emile Zola and Rodin. Commemorative plaques are fitted to the seats to mark the visits of such public figures."; 
 
-	hgallery_catchtext.appendChild(hgallery_catchtext_title);
-	hgallery_catchtext.appendChild(hgallery_catchtext_content);
+	hgallery_catchtext.textContent = "BRASSERIE GEORGES, AN HISTORIC FIGURE IN LYON LIFE.Right from its opening in 1836, Brasserie Georges was a resounding success, graced by stars such as Alphonse de Lamartine. And as it happens, accounts from 1857 show the French writer still owes 40 francs. Many of France’s greatest names have passed through its doors, including Paul Verlaine, Jules Verne, Utrillo, Jongkind, the Lumière brothers, Edouard Herriot, Mistinguett, Léon Blum, Emile Zola and Rodin. Commemorative plaques are fitted to the seats to mark the visits of such public figures."; 
+
 	return hgallery_catchtext;
 }
 

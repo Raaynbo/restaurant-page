@@ -22,11 +22,13 @@ header {
 	justify-content: space-around;
 	gap: 0.4rem;
 	height: 100%;
+	background-color: beige;
 }
 
 .navbar_btn {
 	border: none;
 	width: 100%;
+	text-transform: uppercase;
 }
 
 
@@ -39,7 +41,9 @@ footer {
 }
 
 .selected {
-	background-color: rgba(255, 215, 30, 0.8);
+	background-color: #a30015d2;
+	color: white;
+	font-weight: 700;
 }
 
 .home_logo {
@@ -70,20 +74,25 @@ footer {
 }
 
 .history_date {
-	height: 70vh;
+	height: 50vh;
 	display: flex;
 	flex-direction: column;
+	background-color: white;
 }
 
 
 .history_date_textzone {
-	height: 30vh;
 	display: flex;
 	font-weight: 800;
 	font-size: 1.4rem;
 	color: white;
 	flex-direction: column;
-	gap: 0.8rem;
+}
+
+.hdate_header {
+	display: flex;
+	flex-direction: column;
+	background-color: black;
 }
 
 .hdate_logo {
@@ -94,17 +103,20 @@ footer {
 }
 
 .hdate_text_title {
-	height: 20%;
-	padding: 1rem;
+	padding: 0.5rem;
+	margin-left: 5rem;
+	background-color: white;
+	color: rgb(145, 145, 145);
 }
 
 
 .hdate_text_detail {
-	padding: 1rem;
+	padding: 0.5rem;
 	font-size: 1.1rem;
-	font-weight: 600;
+	font-weight: 400;
 	background-color: white;
-	height: 100%;
+	width: 75vh;
+	margin-left: 5rem;
 	color: black;
 }
 
@@ -115,11 +127,26 @@ footer {
 }
 
 .hgallery_catchtext {
-	padding: 2rem;
+	padding: 1rem;
+	margin-left: 5rem;
 	font-weight: 800;
 	font-size: 23px;
 	height: 20vh;
 	font-weight: 800;
+}
+
+.hgallery_catchtext_title {
+	font-weight: 800;
+	font-size: 32px;
+	width: 80vw;
+	color: #a30015;
+}
+
+.hgallery_catchtext_content {
+	font-weight: 500;
+	font-size: 23px;
+	width: 80vw;
+	color: #a30015;
 }
 
 .location_layout {
@@ -152,6 +179,7 @@ footer {
 
 .carrousel {
 	width: 100%;
+	margin: 0 auto;
 	height: 35vh;
 }
 
@@ -159,6 +187,8 @@ footer {
 .carrousel_img {
 	width: 100%;
 	height: 100%;
+	border-top-right-radius: 1rem;
+	border-top-left-radius: 1rem;
 	z-index: -1;
 }
 
@@ -185,6 +215,9 @@ footer {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: whitesmoke;
+	clip-path: border-box;
+	border-bottom-right-radius: 3rem;
+	border-bottom-left-radius: 3rem;
 }
 
 .carrousel_nav {
@@ -210,12 +243,14 @@ footer {
 .progress {
 	height: 0.1rem;
 	background-color: whitesmoke;
+	z-index: 1;
 }
 
 .bar {
 	width: 10px;
 	height: 0.1rem;
-	background-color: gold;
+	background-color: #a30015;
+	box-shadow: #a30015 0 0 0 1px;
 }
 
 
@@ -241,7 +276,7 @@ footer {
 .gallery_grid {
 	width: 50%;
 	max-width: 650px;
-	margin: 0 auto;
+	margin: 5rem auto;
 	display: grid;
 	grid-template: 0.3fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
 	grid-template-areas:
