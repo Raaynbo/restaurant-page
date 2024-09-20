@@ -136,17 +136,18 @@ footer {
 }
 
 .hgallery_catchtext_title {
-	font-weight: 800;
+	font-weight: 900;
+	font-style: bold;
 	font-size: 32px;
 	width: 80vw;
 	color: #a30015;
 }
 
 .hgallery_catchtext_content {
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 23px;
 	width: 80vw;
-	color: #a30015;
+	color: black;
 }
 
 .location_layout {
@@ -167,6 +168,8 @@ footer {
 }
 
 .location_txt {
+	margin: 1rem;
+	background-color: white;
 	font-size: 1.8rem;
 	padding: 4rem 6rem;
 }
