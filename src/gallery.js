@@ -26,7 +26,7 @@ const guest_infos = [
 	["Paul Verlaine","time lived", "job"],
 ];
 
-function createGalleryGrid(container, size, key){
+function createGalleryGrid(container, size, key, title){
 	const gridzone = document.createElement('div');
 	gridzone.classList.add(`gallery_grid_${key}`);
 
@@ -34,7 +34,7 @@ function createGalleryGrid(container, size, key){
 	grid_title.classList.add("grid_title");
 	grid_title.id = "grid_title";
 
-	grid_title.textContent = "GRID TITLE HERE";
+	grid_title.textContent = "DISCOVER THEIR NAME";
 
 	for (let i = 0; i<size; i++){
 		const gallery = document.createElement('div');

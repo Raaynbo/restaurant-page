@@ -45,6 +45,7 @@ menubtn.addEventListener("click", (e) => {
 //	console.log(actualContent)
 //	socialPage(content);
 //})
+homePage(content);
 
 
 export {actualContent};
