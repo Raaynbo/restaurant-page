@@ -4,6 +4,7 @@ import "./components.css";
 import {homePage} from "./home.js";
 import {historyPage} from "./history.js";
 import {locationPage} from "./location.js";
+import {socialPage} from "./socials.js";
 import {clearElement} from "./utils.js";
 console.log("restaurant-page");
 
@@ -38,11 +39,12 @@ menubtn.addEventListener("click", (e) => {
 	console.log(actualContent)
 	locationPage(content);
 })
-aboutbtn.addEventListener("click", (e) => {
-	clearElement(content, e.target);
-	actualContent = 4;
-	console.log(actualContent)
-})
+//aboutbtn.addEventListener("click", (e) => {
+//	clearElement(content, e.target);
+//	actualContent = 4;
+//	console.log(actualContent)
+//	socialPage(content);
+//})
 
 
 export {actualContent};

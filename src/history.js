@@ -17,37 +17,41 @@ function historyPage(container){
 	// container avec img background carrousel + logo 
 	const hdate = document.createElement('div');
 	const hgallery = document.createElement('div');
+	const carrousel_container = document.createElement('div');
 	hdate.classList.add("history_date");
 	hgallery.classList.add("history_gallery");
 	container.classList.add("history_layout");
 
-	let [hdate_text, hdate_text_title, hdate_logo, hdate_text_detail] = createTextHdate();
+	const title = document.createElement('div');
+	title.classList.add("location_header");
 
-	hdate.appendChild(hdate_text);
+	const logo = document.createElement('img');
+	logo.classList.add("hdate_logo");
+	logo.src = logo_b;
 
-	const hdate_header = document.createElement('div');
-	hdate_header.classList.add("hdate_header");
-	hdate_header.appendChild(hdate_logo);
-	hdate_text.appendChild(hdate_header);
+	title.appendChild(logo);
+	hdate.appendChild(title);
+	container.style.animation = "fadein 0.3s";
 	//hdate_text.appendChild(hdate_text_title);
 	//hdate_text.appendChild(hdate_text_detail);
-	hdate_text_detail.textContent = text[0][0];
-	hdate_text_title.textContent = `${text[0][2]} - ${text[0][1]} `;
 	
 	let hgallery_catchtext = createHgalleryContent();
 
 	hgallery.appendChild(hgallery_catchtext);
-	createGalleryGrid(hgallery);
+	createGalleryGrid(hgallery, 9, "history");
 	let [carrousel, carrousel_img, carrousel_left, carrousel_right] = createCarrousel();
 	let navbar = createCarrouselNavbar();
 	let progress = startProgressBar();
 	
-	hdate.appendChild(carrousel);
-	hdate.appendChild(progress);
-	hdate.appendChild(navbar);
+	
+	carrousel_container.appendChild(carrousel);
+	carrousel_container.appendChild(progress);
+	carrousel_container.appendChild(navbar);
+	hdate.appendChild(carrousel_container);
 	container.appendChild(hdate);
 	container.appendChild(hgallery);
-	hdate.style.animation = "fadein 0.3s";
+	hgallery.style.animation = "fadein 0.3s";
+	carrousel.style.animation = "fadein 0.3s";
 
 
 	let navdatas = document.querySelectorAll(".carrousel_nav");
@@ -70,7 +74,6 @@ function createTextHdate(){
 	const hdate_text = document.createElement('div');
 	const hdate_text_title = document.createElement('div');
 	const hdate_logo = document.createElement('img');
-	hdate_text.classList.add("history_date_textzone");
 	hdate_text.classList.add("history_date_textzone");
 	hdate_logo.classList.add("hdate_logo");
 	

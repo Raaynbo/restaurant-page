@@ -19,7 +19,7 @@ function locationPage(container){
 
 	title.appendChild(logo);
 	container.appendChild(title);
-	title.style.animation = "fadein 0.3s";
+	container.style.animation = "fadein 0.3s";
 	
 
 	const location_txt = document.createElement('div');

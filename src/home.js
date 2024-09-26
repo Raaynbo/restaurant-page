@@ -1,3 +1,6 @@
+import logo_b from "./asset/logo-brasserie-georges.png";
+
+
  function homePage(container){
 	//
 	// container avec img background carrousel + logo 
@@ -7,6 +10,7 @@
 	hometxt.classList.add("home_intro");
 	container.classList.add("home_layout")
 	
+	logo.src = logo_b;
 	hometxt.textContent = "balskbaljbjfgaoigak [o fhpi qo pf oshduffsuojdfi p wjifhsdi fsf hsf i fopf s hs uvspi - i suoi " 
 	
 	container.appendChild(logo);
